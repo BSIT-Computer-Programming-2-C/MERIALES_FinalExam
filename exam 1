@@ -1,0 +1,39 @@
+class Person:
+    def __init__(self, name, age, address):
+        """Constructor to initialize the person's details."""
+        self.__name = name  # Private attribute for name
+        self.__age = age    # Private attribute for age
+        self.__address = address  # Private attribute for address
+
+    # Getter for name
+    def get_name(self):
+        return self.__name
+
+    # Setter for name
+    def set_name(self, name):
+        self.__name = name
+
+    # Getter for age
+    def get_age(self):
+        return self.__age
+
+    # Setter for age
+    def set_age(self, age):
+        if age >= 0:  # Optionally, add validation for non-negative age
+            self.__age = age
+        else:
+            print("Age cannot be negative.")
+
+    # Getter for address
+    def get_address(self):
+        return self.__address
+
+    # Setter for address
+    def set_address(self, address):
+        self.__address = address
+
+# Example usage
+person = Person("Kelvin", 21, "65 Dominican")
+print(person.get_name())  # Kelvin
+print(person.get_age())   # 21
+print(person.get_address())  # 65 Dominican 
